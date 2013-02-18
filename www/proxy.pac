@@ -5,10 +5,6 @@ function FindProxyForURL(url, host) {
     // no proxy for local hosts without domain:
     if (isPlainHostName(host)) return direct;
 
-    if (isInNet(myIpAddress(), "192.168.40.0", "255.255.255.0")) { 
-	return direct;
-	}
-
     // Next, we want to send all traffic to some-company.net browser direct
     if ((host ==  "some-company.net") ||
 	(dnsDomainIs(host, ".some-company.net")) ||
