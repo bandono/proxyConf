@@ -5,13 +5,6 @@ function FindProxyForURL(url, host) {
     // no proxy for local hosts without domain:
     if (isPlainHostName(host)) return direct;
 
-    // Next, we want to send all traffic to some-company.net browser direct
-    if ((host ==  "some-company.net") ||
-	(dnsDomainIs(host, ".some-company.net")) ||
-	(dnsDomainIs(host, ".public.some-company.net"))) {
-       		return direct;
-	}
-
     //Not caching ftp, rsync
      if (
          url.substring(0, 4) == "ftp:"   ||
