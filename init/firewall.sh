@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# kernel set to allow forwarding
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
 # accept DNS requests and other than port 80 (http)
 iptables -A FORWARD -i eth0 -o eth1 -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
