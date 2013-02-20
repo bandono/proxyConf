@@ -10,24 +10,30 @@ managing 192.168.40.0/24 network. The host is also resolvable with some naming e
 proxy1.some-company.net
 
 1. `squid-landing.conf`
+
 This squid3 instance is listening to port 3300 in transparent mode.
 iptables redirect incoming *:80 (`http`) requests to this port.
 a landing page will show up instead to show instruction on how user can change their
 browser setting.
 
 Manually start this instance by:
-$ /usr/sbin/squid3 -f /etc/squid3/squid-landing.conf
+
+`$ /usr/sbin/squid3 -f /etc/squid3/squid-landing.conf`
 
 2. `squid-ncsa.conf`
+
 This is the proxy, listening to port 3128, related user setting can be found in
 `proxy.pac`, the PAC file that will configure the browser.
 
 Authentication used is NCSA using list of username-password in `/etc/squid3/passwd`
 Generating password is done by doing e.g.:
-$ htpasswd /etc/squid3/passwd some-user
+
+`$ htpasswd /etc/squid3/passwd some-user`
 
 Manually start this instances by:
-$ /usr/sbin/squid3 -f /etc/squid3/squid-ncsa.conf
+
+`$ /usr/sbin/squid3 -f /etc/squid3/squid-ncsa.conf`
 
 3. `corpdomainlist`
+
 This is used by the proxy for allowed sites that need no proxy authentication.
