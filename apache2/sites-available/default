@@ -1,4 +1,4 @@
-<VirtualHost *:80>
+<VirtualHost *:81>
         ServerAdmin webmaster@localhost
 
         DocumentRoot /var/www
@@ -12,6 +12,9 @@
                 Order allow,deny
                 allow from all
         </Directory>
+        <Files "proxy.pac">
+                AddType application/x-ns-proxy-autoconfig pac
+        </Files>
 
         ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
         <Directory "/usr/lib/cgi-bin">

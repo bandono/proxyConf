@@ -3,19 +3,16 @@ apache2 config
 
 Files in this folder are placed in /etc/apache2 :
 
-1. ports.conf
-Add port 81 to listen to other than default port 80
+* `sites-available/default`
 
-2. sites-available/default
 This is the default vhost which listen to *:80
-squid3 instance running /etc/squid3/squid-landing.conf in transparent configuration
+squid3 instance running `/etc/squid3/squid-landing.conf` in transparent configuration
 is redirecting its traffic here.
 In the background iptables is doing the redirection of incoming port 80 traffic to
 the above squid3 instance 
 
-3. sites-available/default-proxy
-This is the additional vhost listenning to *:81
 The vhost is configured to serve proxy PAC file type, hence auto configuration URL
-set in user browser is e.g. http://proxy1.some-company.net:81/proxy.pac
+set in user browser is e.g. `http://proxy1.some-company.net/proxy.pac`
 
-4. both of the above vhost config files are linked under sites-enabled/some-file
+The above vhost config file is linked under `sites-enabled/000-default` in default
+Apache2 installation of Ubuntu (it is just link naming)
