@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# flush existing rules to be replaced
+iptables --flush
+iptables --table nat --flush
+iptables --delete-chain
+iptables --table nat --delete-chain
+
 # kernel set to allow forwarding
 echo 1 > /proc/sys/net/ipv4/ip_forward
 
