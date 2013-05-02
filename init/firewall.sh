@@ -15,7 +15,7 @@ iptables -A FORWARD -i eth0 -o eth1 -j ACCEPT
 iptables -t nat -A POSTROUTING -o eth1 -j MASQUERADE
 
 # redirect port 80 to the second instance of squid (proxy2) that will give default site
-iptables -t nat -A PREROUTING -i eth0 -p tcp --dport 80 -j DNAT --to 192.168.40.111:3300
+iptables -t nat -A PREROUTING -i eth0 -p tcp ! -d 192.168.40.111 --dport 80 -j DNAT --to 192.168.40.111:3300
 
 # exception for the above rule to handle request to proxy.pac that is not redirected to port 3300
 iptables -t nat -A POSTROUTING -p tcp -d 192.168.40.111 --dport 80 -j ACCEPT
