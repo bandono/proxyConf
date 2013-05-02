@@ -22,3 +22,6 @@ a DHCP server.
 
 The above vhost config file is linked under `sites-enabled/000-default` in default
 Apache2 installation of Ubuntu (it is just link naming)
+
+A small workaround to rewrite `http` GET of `wpad.dat` that is coming with *trailing*
+*characters* is added for the client to still successfully get the proxy auto discovery.
