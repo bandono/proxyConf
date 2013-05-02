@@ -1,4 +1,4 @@
-<VirtualHost *:81>
+<VirtualHost *:80>
         ServerAdmin webmaster@localhost
 
         DocumentRoot /var/www
@@ -8,13 +8,17 @@
         </Directory>
         <Directory /var/www/>
                 Options Indexes FollowSymLinks MultiViews
-                AllowOverride None
+                AllowOverride All
                 Order allow,deny
                 allow from all
+                RewriteRule ^/wpad.dat/(.*) /wpad.dat [L]
         </Directory>
-        <Files "proxy.pac">
-                AddType application/x-ns-proxy-autoconfig pac
-        </Files>
+			<Files "wpad.dat)">
+					AddType application/x-ns-proxy-autoconfig dat
+			</Files>
+			<Files "proxy.pac">
+					AddType application/x-ns-proxy-autoconfig pac
+			</Files>
 
         ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
         <Directory "/usr/lib/cgi-bin">
