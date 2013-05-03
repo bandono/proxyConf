@@ -1,0 +1,9 @@
+# squid - SQUID HTTP proxy-cache
+# override for the upstart job configuration /etc/init/squid3.conf
+
+description	"HTTP proxy-cache first instances out of two"
+author		"Arif <arif.working@gmail.com>"
+
+kill timeout 30 # wait 30s between SIGTERM and SIGKILL.
+
+env CONFIG="/etc/squid3/squid-ncsa.conf"
