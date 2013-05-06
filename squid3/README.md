@@ -48,11 +48,11 @@ case. It is also meant so the cache is explicitly different from the landing pag
 (second `squid3` instance).
 
 As a general rule of thumb: 10% for `squid3` overhead, another 10% for OS need. Hence,
-in example given by [Squid FAQ: Configuring] [1], 9GB partition reserved for cache is
+in example given by [Squid FAQ Configuring] [1], 9GB partition reserved for cache is
 set to 7000 Mbytes at maximum allowed configuration.
 
 For `cache_mem` one rule of thumb is to configure only one third of the total memory
-consumption (read [Squid FAQ: Memory] [2] for in depth example).
+consumption (read [Squid FAQ Memory] [2] for in depth example).
 
-[1]: "http://wiki.squid-cache.org/SquidFaq/ConfiguringSquid"	"Squid FAQ: Configuring"
-[2]: "http://wiki.squid-cache.org/SquidFaq/SquidMemory"			"Squid FAQ: Memory"
+  [1]: http://wiki.squid-cache.org/SquidFaq/ConfiguringSquid	"Squid FAQ Configuring"
+  [2]: http://wiki.squid-cache.org/SquidFaq/SquidMemory			"Squid FAQ Memory"
