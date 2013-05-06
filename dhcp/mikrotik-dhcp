@@ -1,0 +1,7 @@
+/ip pool add name=dns-auto-conf-pool ranges=192.168.40.65-192.168.40.78
+
+/ip dhcp-server option add code=252 name=pac-server value="http://wpad.some-company.net/wpad.dat\n"
+
+/ip dhcp-server add name=dns-auto-conf-dhcp address-pool=dns-auto-conf-pool interface=ether1 add-arp=yes disabled=no
+
+/ip dhcp-server network add address=192.168.40.64/28 gateway=192.168.40.111 dns-server=192.168.40.106 domain=some-company.net dhcp-option=pac-server
