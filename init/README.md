@@ -45,7 +45,8 @@ is killed unexpectedly.
 Workaround: link `/usr/sbin/squid3` as another name in this case
 `/usr/sbin/squid3ins2`:
 
-```cd /usr/sbin/
+```
+cd /usr/sbin/
 sudo ln -s squid3 squid3ins2
 ```
 
