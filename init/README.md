@@ -30,7 +30,7 @@ squid3 init
 After installing from repository, Ubuntu will place the init in `upstart` style
 (instead of `/etc/rc*.d/` style) making it available as e.g.:
 
-```sudo service start|stop|restart```
+```sudo service {service name} {start|stop|restart}```
 
 with `init` job configuration found as `/etc/init/squid3.conf` 
 
