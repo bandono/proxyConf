@@ -12,7 +12,7 @@ proxy1.some-company.net
 * `squid-landing.conf`
 
 This squid3 instance is listening to port 3300 in transparent mode.
-iptables redirect incoming *:80 (`http`) requests to this port.
+iptables redirect incoming `*:80` (`http`) requests to this port.
 a landing page will show up instead to show instruction on how user can change their
 browser setting.
 
@@ -37,3 +37,22 @@ Manually start this instances by:
 * `corpdomainlist`
 
 This is used by the proxy for allowed sites that need no proxy authentication.
+
+main cache tuning
+=================
+
+The main `squid3` cache used dominantly as HTTP proxy is using `cache_dir` option
+to not only cache to memory. Cache to memory is generally faster. The use of this
+directory cache is part to be evaluated and tuned according to implementation
+case. It is also meant so the cache is explicitly different from the landing page
+(second `squid3` instance).
+
+As a general rule of thumb: 10% for `squid3` overhead, another 10% for OS need. Hence,
+in example given by [Squid FAQ: Configuring] [1], 9GB partition reserved for cache is
+set to 7000 Mbytes at maximum allowed configuration.
+
+For `cache_mem` one rule of thumb is to configure only one third of the total memory
+consumption (read [Squid FAQ: Memory] [2] for in depth example).
+
+[1]: "http://wiki.squid-cache.org/SquidFaq/ConfiguringSquid"	"Squid FAQ: Configuring"
+[2]: "http://wiki.squid-cache.org/SquidFaq/SquidMemory"			"Squid FAQ: Memory"
