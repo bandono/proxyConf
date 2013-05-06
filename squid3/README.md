@@ -48,9 +48,9 @@ directory cache is part to be evaluated and tuned according to implementation
 case. It is also meant so the cache is explicitly different from the landing page
 (second `squid3` instance).
 
-As a general rule of thumb: 10 percet for `squid3` overhead, another 10 percent for OS need. Hence,
-in example given by [Squid FAQ Configuring] [1], 9GB partition reserved for cache is
-set to 7000 Mbytes at maximum allowed configuration.
+As a general rule of thumb: 10 percent for `squid3` overhead, another 10 percent for
+OS need. Hence, in example given by [Squid FAQ Configuring] [1] , 9GB partition
+reserved for cache is set to 7000 Mbytes at maximum allowed configuration.
 
 For `cache_mem` one rule of thumb is to configure only one third of the total memory
 consumption (read [Squid FAQ Memory] [2] for in depth example).
