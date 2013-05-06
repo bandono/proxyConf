@@ -56,4 +56,4 @@ For `cache_mem` one rule of thumb is to configure only one third of the total me
 consumption (read [Memory] [2] for in depth example).
 
   [1]: http://wiki.squid-cache.org/SquidFaq/ConfiguringSquid	"Squid FAQ Configuring"
-  [2]: http://wiki.squid-cache.org/SquidFaq/SquidMemory			"Squid FAQ Memory"
+  [2]: http://wiki.squid-cache.org/SquidFaq/SquidMemory		"Squid FAQ Memory"
