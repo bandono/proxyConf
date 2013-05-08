@@ -62,7 +62,7 @@
                                     <li class="page_item page-item-1"><a href="#Firefox" title="Firefox">Firefox</a></li>
                                     <li class="page_item page-item-2"><a href="#Chrome" title="Chrome">Chrome</a></li>
                                     <li class="page_item page-item-3"><a href="#IE" title="IE">IE</a></li>
-                                    <li class="page_item page-item-4"><a href="Android" title="Android">Android</a></li>
+                                    <li class="page_item page-item-4"><a href="#Android" title="Android">Android</a></li>
                                 </ul>
                             </div>
                             
@@ -94,7 +94,12 @@
                                         
                                         <img src="./images/firefox-03-auto-proxy-config-url.png" />
                                         
-                                        <li>You can roll-back to previous configuration in the future by finding the above <strong>Options</strong> window again</li>
+                                        <li>You can roll-back to previous configuration in the future by finding the above <strong>Options</strong> window and re-entering your previous configuration kept earlier</li>
+                                        <li>Go to some internet address and the authentication box will appear before you can continue. For other application to work e.g. Yahoo Messenger, Skype, etc. you'll
+                                        need to configure individually or if they use system wide configuration just follow the <strong>Internet Options</strong> modification steps (check 
+                                        <a href="#IE" title="IE">IE section</a>)</li>
+                                        
+                                        <img src="./images/firefox-04-proxy-authentication-dialog-box.png" />
                                     </ol>
                                     </p>
                                 </div>
@@ -108,22 +113,108 @@
                                 
                                 <div class="entry">
                                     <p>
-                                    You will need to enter <code>http://some-company.net/proxy.pac</code> into the browser <strong>Automatic proxy configuration URL</strong> to continue using the internet while inside this <code>some-company.net</code> network.
+                                    You will need to enter <code>http://some-company.net/proxy.pac</code> into the browser <strong>Use automatic configuration script</strong> to continue using the internet while inside this <code>some-company.net</code> network.
                                     
                                     After this, if you carry your laptop outside this network, then you may also need to roll-back to previous configuration without our intenal proxy.
                                     
                                     Detailed steps are as follow:
                                     
                                     <ol>
-                                        <li>Open <strong>Options</strong> from <code>Tools</code> &gt; <code>Options</code></li>
+                                        <li>Open <strong>Settings</strong> from <code>Customize and control Google Chrome</code></li>
                                         
+                                        <img src="./images/chrome-01-customize-and-control-google-chrome.png" />
                                         
+                                        <li>Search for <strong>proxy</strong> in the right box to make the <code>Change proxy settings...</code> button to appear</li>
                                         
-                                        <li>Remember or take note of your current configuration before modifying. Fill in new configuration <code>http://some-company.net/proxy.pac</code> by selecting the field "<strong>Automatic proxy configuration URL</strong>"</li>
+                                        <img src="./images/chrome-02-change-proxy-settings.png" />
                                         
+                                        <li>Clicking the above button will take you to the system <strong>Internet Properties</strong> which is the same for <a href="#IE" title="IE">Windows IE</a>. Choose <code>Connections</code> &gt; <code>LAN Settings</code></li>
                                         
+                                         <img src="./images/winxp-internet-properties-01-connection-tab.png"/>
                                         
-                                        <li>You can roll-back to previous configuration in the future by finding the above <strong>Options</strong> window again</li>
+                                        <li>Remember or take note of your current configuration before modifying. Fill in new configuration <code>http://some-company.net/proxy.pac</code> by selecting the field "<strong>Use automatic configuration script</strong>"</li>
+                                        
+                                        <img src="./images/winxp-internet-properties-02-lan-settings.png" />
+                                        
+                                        <li>You can roll-back to previous configuration in the future by finding the above <strong>Settings</strong> and re-entering your previous configuration kept earlier</li>
+                                        <li>Go to some internet address and the authentication box will appear before you can continue. For other application to work e.g. Yahoo Messenger, Skype, etc. you'll
+                                        need to configure individually if they're not using the above system wide configuration.
+                                        
+                                        <img src="./images/chrome-03-proxy-authentication-dialog-box.png" />
+                                    </ol>
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="divider"></div>
+                            
+                            <div class="post-3 post type-post status-publish format-standard hentry category-twitter tag-ads tag-branding tag-perception tag-toddler" id="post-3">
+                                <h2><a id="IE" href="#IE" rel="bookmark" title="IE">MS Windows Internet Explorer (IE)</a></h2>
+                                
+                                
+                                <div class="entry">
+                                    <p>
+                                    You will need to enter <code>http://some-company.net/proxy.pac</code> into the browser <strong>Use automatic configuration script</strong> to continue using the internet while inside this <code>some-company.net</code> network.
+                                    
+                                    After this, if you carry your laptop outside this network, then you may also need to roll-back to previous configuration without our intenal proxy.
+                                    
+                                    Detailed steps are as follow:
+                                    
+                                    <ol>
+                                        <li>Open <strong>Settings</strong> from <code>Tools</code> &gt; <code>Internet Options</code>
+                                        <br />(screenshot below is taken from IE 8 in Windows 7 but should generally apply for older IE/Windows)</li>
+                                         
+                                        <img src="./images/ie-01-ie8-win7-tools-internet-options.png" />
+
+                                        <li>In <strong>Internet Properties</strong> choose <code>Connections</code> &gt; <code>LAN Settings</code>
+                                        
+                                         <img src="./images/winxp-internet-properties-01-connection-tab.png"/>
+                                        
+                                        <li>Remember or take note of your current configuration before modifying. Fill in new configuration <code>http://some-company.net/proxy.pac</code> by selecting the field "<strong>Use automatic configuration script</strong>"</li>
+                                        
+                                        <img src="./images/winxp-internet-properties-02-lan-settings.png" />
+                                        
+                                        <li>You can roll-back to previous configuration in the future by finding the above <strong>Settings</strong> and re-entering your previous configuration kept earlier</li>
+                                        <li>Go to some internet address and the authentication box will appear before you can continue. For other application to work e.g. Yahoo Messenger, Skype, etc. you'll
+                                        need to configure individually if they're not using the above system wide configuration.
+                                        
+                                        <img src="./images/ie-02-ie8-win7-tools-internet-options.png" />
+                                    </ol>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="divider"></div>
+                            
+                            <div class="post-4 post type-post status-publish format-standard hentry category-twitter tag-ads tag-branding tag-perception tag-toddler" id="post-4">
+                                <h2><a id="Android" href="#Android" rel="bookmark" title="Android">Android</a></h2>
+                                
+                                
+                                <div class="entry">
+                                    <p>
+									You will need to enter <code>some-company.net</code> and <code>{port number}</code> into the WiFi settings's <strong>Proxy host name/port</strong> to continue using the internet while inside this <code>some-company.net</code> network.
+                                    
+                                    Detailed steps are as follow:
+                                    
+                                    <ol>
+                                        <li>Once connected to our WiFi, open <strong>Modify network config.</strong> by tap-and-holding our WiFi access point name (check for the one
+                                        with the status: connected).
+                                        In the screenshot example tap <code>More settings</code> &gt; <code>Pi (connected)</code>
+                                        <br />(screenshot below is taken Android 4.04 ICS)</li>
+                                         
+                                        <img src="./images/android-01-settings-connected-wifi-apn-modify-network.png" />
+
+                                        <li>Scroll then active <code>Show advanced options</code>. Choose <code>Proxy settings</code> &gt; <code>Manual</code> </li>
+                                        
+                                         <img src="./images/android-02-show-advanced-options-manual-proxy-.png"/>
+                                        
+                                        <li>Remember or take note of your current configuration before modifying.
+                                        Fill in new configuration <code>some-company.net</code> (Proxy host name) and <code>{port number}</code> (Proxy port)</li>
+                                        
+                                        <img src="./images/android-03-http-proxy-used-by-browser.png" />
+                                        
+                                        <li>Go to some internet address and the authentication box will appear before you can continue. For other application to work e.g. Yahoo Messenger, Skype, etc. you'll
+                                        need to configure individually if they're not using the above system wide configuration.</li>
                                     </ol>
                                     </p>
                                 </div>
